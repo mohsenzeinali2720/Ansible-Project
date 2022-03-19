@@ -1,0 +1,7 @@
+#Sample Ansible script-module.yaml
+- name: Play Scripts
+  hosts: centos
+  become: yes
+  tasks:
+   - name: Run a script on remote server
+     script: /home/user1/demo-module/script.sh
