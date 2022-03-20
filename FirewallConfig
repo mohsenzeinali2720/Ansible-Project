@@ -1,0 +1,8 @@
+- name: Set Firewall Configurations
+  hosts: Ubuntu2
+  become: yes
+
+  tasks:
+    - ufw:
+        rule: allow
+        name: openssh
