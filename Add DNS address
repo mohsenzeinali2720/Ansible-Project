@@ -1,0 +1,10 @@
+#Sample Ansible lineinfile-module.yaml
+- name: Add DNS address
+  hosts: Ubuntu2
+  become: yes
+
+  tasks:
+   - name: Add DNS server to resolv.conf
+     lineinfile:
+       path: /etc/resolv.conf
+       line: 'nameserver 8.8.8.8'
